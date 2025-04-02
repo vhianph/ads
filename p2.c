@@ -60,10 +60,7 @@ int main() {
     int diff = dateDifference(date1, date2);
     printf("Difference: %d day(s)\n", diff);
 
-    /* Complexity:
-       nextDay: O(1)
-       dayOfYear and dateDifference: O(1) (constant time, as the number of months is fixed)
-    */
+
     
     return 0;
 }
