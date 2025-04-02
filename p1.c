@@ -3,12 +3,14 @@
 #include <stdbool.h>
 #define SIZE 10
 
+// Time Complexity: O(1)
 bool isPerfectSquare(int n) {
     if (n < 0) return false;
     int root = (int)sqrt(n);
     return (root * root == n);
 }
 
+// Time Complexity: O(n)
 void rearrangePerfectSquares(int arr[], int n) {
     int index = 0;
     for (int i = 0; i < n; i++) {
@@ -21,6 +23,7 @@ void rearrangePerfectSquares(int arr[], int n) {
     }
 }
 
+// Time Complexity: O(n)
 void displayArray(int arr[], int n) {
     for (int i = 0; i < n; i++) {
         printf("%d ", arr[i]);
@@ -39,9 +42,11 @@ int main() {
     printf("Array after rearranging (perfect squares first):\n");
     displayArray(arr, SIZE);
     
-    // Complexity:
-    // isPerfectSquare: O(1) (assuming sqrt() is constant time)
-    // rearrangePerfectSquares: O(n)
+    // Total Complexity:
+    // - isPerfectSquare: O(1)
+    // - rearrangePerfectSquares: O(n)
+    // - displayArray: O(n)
+    // Overall, the program runs in O(n) time.
     
-        return 0;
-    }
+    return 0;
+}
